@@ -10,7 +10,7 @@ LRU on-memory/disk cache for Swift
 ```swift
 import CacheKit
 
-let cache = MemoryCache<NSImage>()
+let cache = MemoryCache<UIImage>()
 cache["key"] = image
 
 ...
