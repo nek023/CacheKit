@@ -29,7 +29,6 @@
 /* Begin PBXFileReference section */
 		AA23288F1AB2D52900BE02C6 /* DiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
 		AA2328911AB2D6E500BE02C6 /* DiskCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskCacheTests.swift; sourceTree = "<group>"; };
-		AA6E8D971AB27EE5007C1290 /* CacheKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CacheKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		AAC6E9F91AB1C3780005C317 /* CacheKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC6E9FD1AB1C3780005C317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAC6E9FE1AB1C3780005C317 /* CacheKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheKit.h; sourceTree = "<group>"; };
@@ -111,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				AAC6EA0A1AB1C3780005C317 /* Info.plist */,
-				AA6E8D971AB27EE5007C1290 /* CacheKitTests-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -396,7 +394,7 @@
 					"$(SDKROOT)/usr/lib/system",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "CacheKitTests/CacheKitTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -415,7 +413,7 @@
 					"$(SDKROOT)/usr/lib/system",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "CacheKitTests/CacheKitTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
