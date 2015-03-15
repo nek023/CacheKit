@@ -105,6 +105,10 @@ public class DiskCache<T: NSCoding>: Cache {
     }
     
     public func objectForKey(key: String) -> CacheObject? {
+        if !hasObjectForKey(key) {
+            return nil
+        }
+        
         let filePath = directoryPath.stringByAppendingPathComponent(key)
         
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
@@ -118,6 +122,10 @@ public class DiskCache<T: NSCoding>: Cache {
     }
     
     public func removeObjectForKey(key: String) {
+        if !hasObjectForKey(key) {
+            return
+        }
+        
         let filePath = directoryPath.stringByAppendingPathComponent(key)
         
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
@@ -143,19 +151,11 @@ public class DiskCache<T: NSCoding>: Cache {
         // Remove all files
         let fileManager = NSFileManager.defaultManager()
         
-        let enumerator = fileManager.enumeratorAtURL(
-            NSURL(fileURLWithPath: directoryPath)!,
-            includingPropertiesForKeys: [NSURLPathKey],
-            options: .SkipsHiddenFiles,
-            errorHandler: { (URL: NSURL!, error: NSError!) -> Bool in
-                NSException.raise(error!.domain, format: "Error: %@", arguments: getVaList([error!.localizedDescription]))
-                return false
-            }
-        )!
-        
-        while let fileURL = enumerator.nextObject() as? NSURL {
+        for entry in entries {
+            let filePath = directoryPath.stringByAppendingPathComponent(entry.0)
+            
             var error: NSError?
-            if !fileManager.removeItemAtPath(fileURL.path!, error: &error) {
+            if !fileManager.removeItemAtPath(filePath, error: &error) {
                 NSException.raise(error!.domain, format: "Error: %@", arguments: getVaList([error!.localizedDescription]))
             }
         }
@@ -167,7 +167,13 @@ public class DiskCache<T: NSCoding>: Cache {
     }
     
     public func hasObjectForKey(key: String) -> Bool {
-        return (objectForKey(key) != nil)
+        for (index, entry) in enumerate(entries) {
+            if entry.0 == key {
+                return true
+            }
+        }
+        
+        return false
     }
     
     public subscript(key: String) -> T? {
