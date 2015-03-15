@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA9228BA1AB5B830003C5B80"
-               BuildableName = "CacheKit.framework"
-               BlueprintName = "CacheKit"
+               BlueprintIdentifier = "AAF4466B1AB5B9BF000DA59D"
+               BuildableName = "CacheKitOSX.framework"
+               BlueprintName = "CacheKitOSX"
+               ReferencedContainer = "container:CacheKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AAF4469B1AB5BA27000DA59D"
+               BuildableName = "CacheKitTests.xctest"
+               BlueprintName = "CacheKitTests"
                ReferencedContainer = "container:CacheKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,13 +42,23 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AAF4469B1AB5BA27000DA59D"
+               BuildableName = "CacheKitTests.xctest"
+               BlueprintName = "CacheKitTests"
+               ReferencedContainer = "container:CacheKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA9228BA1AB5B830003C5B80"
-            BuildableName = "CacheKit.framework"
-            BlueprintName = "CacheKit"
+            BlueprintIdentifier = "AAF4466B1AB5B9BF000DA59D"
+            BuildableName = "CacheKitOSX.framework"
+            BlueprintName = "CacheKitOSX"
             ReferencedContainer = "container:CacheKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -51,9 +75,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA9228BA1AB5B830003C5B80"
-            BuildableName = "CacheKit.framework"
-            BlueprintName = "CacheKit"
+            BlueprintIdentifier = "AAF4466B1AB5B9BF000DA59D"
+            BuildableName = "CacheKitOSX.framework"
+            BlueprintName = "CacheKitOSX"
             ReferencedContainer = "container:CacheKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -69,9 +93,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA9228BA1AB5B830003C5B80"
-            BuildableName = "CacheKit.framework"
-            BlueprintName = "CacheKit"
+            BlueprintIdentifier = "AAF4466B1AB5B9BF000DA59D"
+            BuildableName = "CacheKitOSX.framework"
+            BlueprintName = "CacheKitOSX"
             ReferencedContainer = "container:CacheKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
