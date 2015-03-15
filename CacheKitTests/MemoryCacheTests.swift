@@ -8,7 +8,7 @@
 
 import Foundation
 import XCTest
-import CacheKitOSX
+import CacheKit
 
 class MemoryCacheTests: XCTestCase {
     

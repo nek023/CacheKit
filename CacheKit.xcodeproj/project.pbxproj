@@ -8,25 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		AA9228C11AB5B830003C5B80 /* CacheKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AA9228C01AB5B830003C5B80 /* CacheKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA9228C71AB5B830003C5B80 /* CacheKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9228BB1AB5B830003C5B80 /* CacheKit.framework */; };
 		AA9228DA1AB5B846003C5B80 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9228D71AB5B846003C5B80 /* Cache.swift */; };
 		AA9228DB1AB5B846003C5B80 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9228D81AB5B846003C5B80 /* DiskCache.swift */; };
 		AA9228DC1AB5B846003C5B80 /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9228D91AB5B846003C5B80 /* MemoryCache.swift */; };
-		AAF446711AB5B9BF000DA59D /* CacheKitOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF446701AB5B9BF000DA59D /* CacheKitOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAF446951AB5BA00000DA59D /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9228D71AB5B846003C5B80 /* Cache.swift */; };
-		AAF446961AB5BA00000DA59D /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9228D91AB5B846003C5B80 /* MemoryCache.swift */; };
-		AAF446971AB5BA00000DA59D /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9228D81AB5B846003C5B80 /* DiskCache.swift */; };
-		AAF446A21AB5BA27000DA59D /* CacheKitOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF4466C1AB5B9BF000DA59D /* CacheKitOSX.framework */; };
-		AAF446AA1AB5BA31000DA59D /* MemoryCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF446A81AB5BA31000DA59D /* MemoryCacheTests.swift */; };
-		AAF446AB1AB5BA31000DA59D /* DiskCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF446A91AB5BA31000DA59D /* DiskCacheTests.swift */; };
+		AA9228DF1AB5B85C003C5B80 /* DiskCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9228DD1AB5B85C003C5B80 /* DiskCacheTests.swift */; };
+		AA9228E01AB5B85C003C5B80 /* MemoryCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9228DE1AB5B85C003C5B80 /* MemoryCacheTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AAF446A31AB5BA27000DA59D /* PBXContainerItemProxy */ = {
+		AA9228C81AB5B830003C5B80 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA9228B21AB5B830003C5B80 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AAF4466B1AB5B9BF000DA59D;
-			remoteInfo = CacheKitOSX;
+			remoteGlobalIDString = AA9228BA1AB5B830003C5B80;
+			remoteInfo = CacheKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -34,16 +30,13 @@
 		AA9228BB1AB5B830003C5B80 /* CacheKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9228BF1AB5B830003C5B80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA9228C01AB5B830003C5B80 /* CacheKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheKit.h; sourceTree = "<group>"; };
+		AA9228C61AB5B830003C5B80 /* CacheKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CacheKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA9228CC1AB5B830003C5B80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA9228D71AB5B846003C5B80 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		AA9228D81AB5B846003C5B80 /* DiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
 		AA9228D91AB5B846003C5B80 /* MemoryCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCache.swift; sourceTree = "<group>"; };
-		AAF4466C1AB5B9BF000DA59D /* CacheKitOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheKitOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAF4466F1AB5B9BF000DA59D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAF446701AB5B9BF000DA59D /* CacheKitOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheKitOSX.h; sourceTree = "<group>"; };
-		AAF4469C1AB5BA27000DA59D /* CacheKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CacheKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAF4469F1AB5BA27000DA59D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAF446A81AB5BA31000DA59D /* MemoryCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCacheTests.swift; sourceTree = "<group>"; };
-		AAF446A91AB5BA31000DA59D /* DiskCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskCacheTests.swift; sourceTree = "<group>"; };
+		AA9228DD1AB5B85C003C5B80 /* DiskCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskCacheTests.swift; sourceTree = "<group>"; };
+		AA9228DE1AB5B85C003C5B80 /* MemoryCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCacheTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,18 +47,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AAF446681AB5B9BF000DA59D /* Frameworks */ = {
+		AA9228C31AB5B830003C5B80 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AAF446991AB5BA27000DA59D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AAF446A21AB5BA27000DA59D /* CacheKitOSX.framework in Frameworks */,
+				AA9228C71AB5B830003C5B80 /* CacheKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,8 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				AA9228BD1AB5B830003C5B80 /* CacheKit */,
-				AAF4466D1AB5B9BF000DA59D /* CacheKitOSX */,
-				AAF4469D1AB5BA27000DA59D /* CacheKitTests */,
+				AA9228CA1AB5B830003C5B80 /* CacheKitTests */,
 				AA9228BC1AB5B830003C5B80 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,8 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				AA9228BB1AB5B830003C5B80 /* CacheKit.framework */,
-				AAF4466C1AB5B9BF000DA59D /* CacheKitOSX.framework */,
-				AAF4469C1AB5BA27000DA59D /* CacheKitTests.xctest */,
+				AA9228C61AB5B830003C5B80 /* CacheKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,37 +96,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AAF4466D1AB5B9BF000DA59D /* CacheKitOSX */ = {
+		AA9228CA1AB5B830003C5B80 /* CacheKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				AAF446701AB5B9BF000DA59D /* CacheKitOSX.h */,
-				AAF4466E1AB5B9BF000DA59D /* Supporting Files */,
-			);
-			path = CacheKitOSX;
-			sourceTree = "<group>";
-		};
-		AAF4466E1AB5B9BF000DA59D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AAF4466F1AB5B9BF000DA59D /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AAF4469D1AB5BA27000DA59D /* CacheKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				AAF446A81AB5BA31000DA59D /* MemoryCacheTests.swift */,
-				AAF446A91AB5BA31000DA59D /* DiskCacheTests.swift */,
-				AAF4469E1AB5BA27000DA59D /* Supporting Files */,
+				AA9228DE1AB5B85C003C5B80 /* MemoryCacheTests.swift */,
+				AA9228DD1AB5B85C003C5B80 /* DiskCacheTests.swift */,
+				AA9228CB1AB5B830003C5B80 /* Supporting Files */,
 			);
 			path = CacheKitTests;
 			sourceTree = "<group>";
 		};
-		AAF4469E1AB5BA27000DA59D /* Supporting Files */ = {
+		AA9228CB1AB5B830003C5B80 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AAF4469F1AB5BA27000DA59D /* Info.plist */,
+				AA9228CC1AB5B830003C5B80 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -155,14 +122,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA9228C11AB5B830003C5B80 /* CacheKit.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AAF446691AB5B9BF000DA59D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AAF446711AB5B9BF000DA59D /* CacheKitOSX.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,40 +146,22 @@
 			productReference = AA9228BB1AB5B830003C5B80 /* CacheKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		AAF4466B1AB5B9BF000DA59D /* CacheKitOSX */ = {
+		AA9228C51AB5B830003C5B80 /* CacheKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AAF446831AB5B9BF000DA59D /* Build configuration list for PBXNativeTarget "CacheKitOSX" */;
+			buildConfigurationList = AA9228D41AB5B830003C5B80 /* Build configuration list for PBXNativeTarget "CacheKitTests" */;
 			buildPhases = (
-				AAF446671AB5B9BF000DA59D /* Sources */,
-				AAF446681AB5B9BF000DA59D /* Frameworks */,
-				AAF446691AB5B9BF000DA59D /* Headers */,
-				AAF4466A1AB5B9BF000DA59D /* Resources */,
+				AA9228C21AB5B830003C5B80 /* Sources */,
+				AA9228C31AB5B830003C5B80 /* Frameworks */,
+				AA9228C41AB5B830003C5B80 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = CacheKitOSX;
-			productName = CacheKitOSX;
-			productReference = AAF4466C1AB5B9BF000DA59D /* CacheKitOSX.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		AAF4469B1AB5BA27000DA59D /* CacheKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AAF446A51AB5BA27000DA59D /* Build configuration list for PBXNativeTarget "CacheKitTests" */;
-			buildPhases = (
-				AAF446981AB5BA27000DA59D /* Sources */,
-				AAF446991AB5BA27000DA59D /* Frameworks */,
-				AAF4469A1AB5BA27000DA59D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AAF446A41AB5BA27000DA59D /* PBXTargetDependency */,
+				AA9228C91AB5B830003C5B80 /* PBXTargetDependency */,
 			);
 			name = CacheKitTests;
 			productName = CacheKitTests;
-			productReference = AAF4469C1AB5BA27000DA59D /* CacheKitTests.xctest */;
+			productReference = AA9228C61AB5B830003C5B80 /* CacheKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -235,10 +176,7 @@
 					AA9228BA1AB5B830003C5B80 = {
 						CreatedOnToolsVersion = 6.2;
 					};
-					AAF4466B1AB5B9BF000DA59D = {
-						CreatedOnToolsVersion = 6.2;
-					};
-					AAF4469B1AB5BA27000DA59D = {
+					AA9228C51AB5B830003C5B80 = {
 						CreatedOnToolsVersion = 6.2;
 					};
 				};
@@ -256,8 +194,7 @@
 			projectRoot = "";
 			targets = (
 				AA9228BA1AB5B830003C5B80 /* CacheKit */,
-				AAF4466B1AB5B9BF000DA59D /* CacheKitOSX */,
-				AAF4469B1AB5BA27000DA59D /* CacheKitTests */,
+				AA9228C51AB5B830003C5B80 /* CacheKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -270,14 +207,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AAF4466A1AB5B9BF000DA59D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AAF4469A1AB5BA27000DA59D /* Resources */ = {
+		AA9228C41AB5B830003C5B80 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -297,32 +227,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AAF446671AB5B9BF000DA59D /* Sources */ = {
+		AA9228C21AB5B830003C5B80 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAF446951AB5BA00000DA59D /* Cache.swift in Sources */,
-				AAF446961AB5BA00000DA59D /* MemoryCache.swift in Sources */,
-				AAF446971AB5BA00000DA59D /* DiskCache.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AAF446981AB5BA27000DA59D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AAF446AB1AB5BA31000DA59D /* DiskCacheTests.swift in Sources */,
-				AAF446AA1AB5BA31000DA59D /* MemoryCacheTests.swift in Sources */,
+				AA9228E01AB5B85C003C5B80 /* MemoryCacheTests.swift in Sources */,
+				AA9228DF1AB5B85C003C5B80 /* DiskCacheTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AAF446A41AB5BA27000DA59D /* PBXTargetDependency */ = {
+		AA9228C91AB5B830003C5B80 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AAF4466B1AB5B9BF000DA59D /* CacheKitOSX */;
-			targetProxy = AAF446A31AB5BA27000DA59D /* PBXContainerItemProxy */;
+			target = AA9228BA1AB5B830003C5B80 /* CacheKit */;
+			targetProxy = AA9228C81AB5B830003C5B80 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -422,7 +342,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CacheKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -440,62 +359,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CacheKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		AAF4467F1AB5B9BF000DA59D /* Debug */ = {
+		AA9228D51AB5B830003C5B80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CacheKitOSX/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		AAF446801AB5B9BF000DA59D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = CacheKitOSX/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		AAF446A61AB5BA27000DA59D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -503,27 +377,21 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = CacheKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
-		AAF446A71AB5BA27000DA59D /* Release */ = {
+		AA9228D61AB5B830003C5B80 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = CacheKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -548,20 +416,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AAF446831AB5B9BF000DA59D /* Build configuration list for PBXNativeTarget "CacheKitOSX" */ = {
+		AA9228D41AB5B830003C5B80 /* Build configuration list for PBXNativeTarget "CacheKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AAF4467F1AB5B9BF000DA59D /* Debug */,
-				AAF446801AB5B9BF000DA59D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AAF446A51AB5BA27000DA59D /* Build configuration list for PBXNativeTarget "CacheKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AAF446A61AB5BA27000DA59D /* Debug */,
-				AAF446A71AB5BA27000DA59D /* Release */,
+				AA9228D51AB5B830003C5B80 /* Debug */,
+				AA9228D61AB5B830003C5B80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
