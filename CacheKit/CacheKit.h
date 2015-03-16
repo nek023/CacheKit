@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 Katsuma Tanaka. All rights reserved.
 //
 
-#if TARGET_OS_MAC
-    #import <Foundation/Foundation.h>
-#else
+#import <Foundation/Foundation.h>
+
+#if TARGET_OS_IPHONE
     #import <UIKit/UIKit.h>
 #endif
 

@@ -61,9 +61,12 @@ public class DiskCache<T: NSCoding>: Cache {
         while let fileURL = enumerator.nextObject() as? NSURL {
             let filePath = fileURL.path!
             let attributes = fileManager.attributesOfItemAtPath(filePath, error: nil)!
-            let modificationDate = attributes[NSFileModificationDate] as NSDate
-            
-            entries.append((filePath.lastPathComponent, modificationDate))
+            if let modificationDate = attributes[NSFileModificationDate] as? NSDate {
+                entries.append((filePath.lastPathComponent, modificationDate))
+            } else {
+                let date = NSDate()
+                entries.append((filePath.lastPathComponent, date))
+            }
         }
         
         entries.sort { return ($0.1.compare($1.1) == .OrderedAscending) }
