@@ -9,7 +9,7 @@
 #if os(iOS)
     import UIKit
 #elseif os(OSX)
-    import Cocoa
+    import Foundation
 #endif
 
 public class MemoryCache<T: AnyObject>: Cache {

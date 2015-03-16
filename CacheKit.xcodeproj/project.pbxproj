@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA027DB41AB67B6A003C794A /* CacheKit-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = AA027DB31AB67B6A003C794A /* CacheKit-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA027DBA1AB67B6A003C794A /* CacheKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA027DAF1AB67B6A003C794A /* CacheKit.framework */; };
-		AA027DD21AB67B73003C794A /* CacheKit-OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = AA027DD11AB67B73003C794A /* CacheKit-OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA027DD81AB67B73003C794A /* CacheKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA027DCD1AB67B73003C794A /* CacheKit.framework */; };
-		AA6CF0FB1AB67BB2005A94DC /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6CF0F81AB67BB2005A94DC /* Cache.swift */; };
-		AA6CF0FC1AB67BB2005A94DC /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6CF0F81AB67BB2005A94DC /* Cache.swift */; };
-		AA6CF0FD1AB67BB2005A94DC /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6CF0F91AB67BB2005A94DC /* DiskCache.swift */; };
-		AA6CF0FE1AB67BB2005A94DC /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6CF0F91AB67BB2005A94DC /* DiskCache.swift */; };
-		AA6CF0FF1AB67BB2005A94DC /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6CF0FA1AB67BB2005A94DC /* MemoryCache.swift */; };
-		AA6CF1001AB67BB2005A94DC /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6CF0FA1AB67BB2005A94DC /* MemoryCache.swift */; };
 		AA6CF1041AB67BD8005A94DC /* DiskCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6CF1021AB67BD8005A94DC /* DiskCacheTests.swift */; };
 		AA6CF1051AB67BD8005A94DC /* DiskCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6CF1021AB67BD8005A94DC /* DiskCacheTests.swift */; };
 		AA6CF1061AB67BD8005A94DC /* MemoryCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6CF1031AB67BD8005A94DC /* MemoryCacheTests.swift */; };
 		AA6CF1071AB67BD8005A94DC /* MemoryCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6CF1031AB67BD8005A94DC /* MemoryCacheTests.swift */; };
+		AA91701E1AB67DE600BD1779 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91701A1AB67DE600BD1779 /* Cache.swift */; };
+		AA91701F1AB67DE600BD1779 /* CacheKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AA91701B1AB67DE600BD1779 /* CacheKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA9170201AB67DE600BD1779 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91701C1AB67DE600BD1779 /* DiskCache.swift */; };
+		AA9170211AB67DE600BD1779 /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91701D1AB67DE600BD1779 /* MemoryCache.swift */; };
+		AA9170221AB67F1E00BD1779 /* CacheKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AA91701B1AB67DE600BD1779 /* CacheKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA9170241AB680CD00BD1779 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91701C1AB67DE600BD1779 /* DiskCache.swift */; };
+		AA9170251AB680CD00BD1779 /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91701D1AB67DE600BD1779 /* MemoryCache.swift */; };
+		AA9170261AB681F800BD1779 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91701A1AB67DE600BD1779 /* Cache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,20 +42,18 @@
 
 /* Begin PBXFileReference section */
 		AA027DAF1AB67B6A003C794A /* CacheKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA027DB21AB67B6A003C794A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA027DB31AB67B6A003C794A /* CacheKit-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CacheKit-iOS.h"; sourceTree = "<group>"; };
 		AA027DB91AB67B6A003C794A /* CacheKit-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CacheKit-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA027DBF1AB67B6A003C794A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA027DCD1AB67B73003C794A /* CacheKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA027DD01AB67B73003C794A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA027DD11AB67B73003C794A /* CacheKit-OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CacheKit-OSX.h"; sourceTree = "<group>"; };
 		AA027DD71AB67B73003C794A /* CacheKit-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CacheKit-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA027DDD1AB67B73003C794A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA6CF0F81AB67BB2005A94DC /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
-		AA6CF0F91AB67BB2005A94DC /* DiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
-		AA6CF0FA1AB67BB2005A94DC /* MemoryCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCache.swift; sourceTree = "<group>"; };
 		AA6CF1021AB67BD8005A94DC /* DiskCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskCacheTests.swift; sourceTree = "<group>"; };
 		AA6CF1031AB67BD8005A94DC /* MemoryCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCacheTests.swift; sourceTree = "<group>"; };
+		AA91701A1AB67DE600BD1779 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		AA91701B1AB67DE600BD1779 /* CacheKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheKit.h; sourceTree = "<group>"; };
+		AA91701C1AB67DE600BD1779 /* DiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
+		AA91701D1AB67DE600BD1779 /* MemoryCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCache.swift; sourceTree = "<group>"; };
+		AA9170271AB683A100BD1779 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,23 +90,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AA027DB01AB67B6A003C794A /* CacheKit-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				AA027DB31AB67B6A003C794A /* CacheKit-iOS.h */,
-				AA027DB11AB67B6A003C794A /* Supporting Files */,
-			);
-			path = "CacheKit-iOS";
-			sourceTree = "<group>";
-		};
-		AA027DB11AB67B6A003C794A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AA027DB21AB67B6A003C794A /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		AA027DBD1AB67B6A003C794A /* CacheKit-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,23 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				AA027DBF1AB67B6A003C794A /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AA027DCE1AB67B73003C794A /* CacheKit-OSX */ = {
-			isa = PBXGroup;
-			children = (
-				AA027DD11AB67B73003C794A /* CacheKit-OSX.h */,
-				AA027DCF1AB67B73003C794A /* Supporting Files */,
-			);
-			path = "CacheKit-OSX";
-			sourceTree = "<group>";
-		};
-		AA027DCF1AB67B73003C794A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AA027DD01AB67B73003C794A /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -158,34 +122,42 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AA6CF1011AB67BB9005A94DC /* CacheKit */ = {
-			isa = PBXGroup;
-			children = (
-				AA6CF0F81AB67BB2005A94DC /* Cache.swift */,
-				AA6CF0F91AB67BB2005A94DC /* DiskCache.swift */,
-				AA6CF0FA1AB67BB2005A94DC /* MemoryCache.swift */,
-			);
-			name = CacheKit;
-			sourceTree = "<group>";
-		};
 		AA6CF1081AB67BDD005A94DC /* CacheKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				AA6CF1021AB67BD8005A94DC /* DiskCacheTests.swift */,
 				AA6CF1031AB67BD8005A94DC /* MemoryCacheTests.swift */,
+				AA6CF1021AB67BD8005A94DC /* DiskCacheTests.swift */,
 			);
 			name = CacheKitTests;
 			path = "CacheKit-iOSTests";
 			sourceTree = "<group>";
 		};
+		AA9170191AB67DE600BD1779 /* CacheKit */ = {
+			isa = PBXGroup;
+			children = (
+				AA91701B1AB67DE600BD1779 /* CacheKit.h */,
+				AA91701A1AB67DE600BD1779 /* Cache.swift */,
+				AA91701D1AB67DE600BD1779 /* MemoryCache.swift */,
+				AA91701C1AB67DE600BD1779 /* DiskCache.swift */,
+				AA91702A1AB683A400BD1779 /* Supporting Files */,
+			);
+			path = CacheKit;
+			sourceTree = "<group>";
+		};
+		AA91702A1AB683A400BD1779 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA9170271AB683A100BD1779 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		AA9228B11AB5B830003C5B80 = {
 			isa = PBXGroup;
 			children = (
-				AA6CF1011AB67BB9005A94DC /* CacheKit */,
+				AA9170191AB67DE600BD1779 /* CacheKit */,
 				AA6CF1081AB67BDD005A94DC /* CacheKitTests */,
-				AA027DB01AB67B6A003C794A /* CacheKit-iOS */,
 				AA027DBD1AB67B6A003C794A /* CacheKit-iOSTests */,
-				AA027DCE1AB67B73003C794A /* CacheKit-OSX */,
 				AA027DDB1AB67B73003C794A /* CacheKit-OSXTests */,
 				AA9228BC1AB5B830003C5B80 /* Products */,
 			);
@@ -209,7 +181,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA027DB41AB67B6A003C794A /* CacheKit-iOS.h in Headers */,
+				AA91701F1AB67DE600BD1779 /* CacheKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +189,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA027DD21AB67B73003C794A /* CacheKit-OSX.h in Headers */,
+				AA9170221AB67F1E00BD1779 /* CacheKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,9 +347,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA6CF0FF1AB67BB2005A94DC /* MemoryCache.swift in Sources */,
-				AA6CF0FB1AB67BB2005A94DC /* Cache.swift in Sources */,
-				AA6CF0FD1AB67BB2005A94DC /* DiskCache.swift in Sources */,
+				AA9170211AB67DE600BD1779 /* MemoryCache.swift in Sources */,
+				AA91701E1AB67DE600BD1779 /* Cache.swift in Sources */,
+				AA9170201AB67DE600BD1779 /* DiskCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,9 +366,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA6CF1001AB67BB2005A94DC /* MemoryCache.swift in Sources */,
-				AA6CF0FC1AB67BB2005A94DC /* Cache.swift in Sources */,
-				AA6CF0FE1AB67BB2005A94DC /* DiskCache.swift in Sources */,
+				AA9170261AB681F800BD1779 /* Cache.swift in Sources */,
+				AA9170241AB680CD00BD1779 /* DiskCache.swift in Sources */,
+				AA9170251AB680CD00BD1779 /* MemoryCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +409,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "CacheKit-iOS/Info.plist";
+				INFOPLIST_FILE = CacheKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = CacheKit;
@@ -454,7 +426,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "CacheKit-iOS/Info.plist";
+				INFOPLIST_FILE = CacheKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = CacheKit;
@@ -506,7 +478,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "CacheKit-OSX/Info.plist";
+				INFOPLIST_FILE = CacheKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -528,7 +500,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "CacheKit-OSX/Info.plist";
+				INFOPLIST_FILE = CacheKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
