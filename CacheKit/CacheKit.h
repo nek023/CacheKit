@@ -2,11 +2,15 @@
 //  CacheKit.h
 //  CacheKit
 //
-//  Created by Katsuma Tanaka on 2015/03/15.
+//  Created by Katsuma Tanaka on 2015/03/16.
 //  Copyright (c) 2015年 Katsuma Tanaka. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#if TARGET_OS_IPHONE
+    #import <UIKit/UIKit.h>
+#endif
 
 //! Project version number for CacheKit.
 FOUNDATION_EXPORT double CacheKitVersionNumber;

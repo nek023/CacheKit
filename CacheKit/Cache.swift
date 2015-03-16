@@ -6,6 +6,8 @@
 //  Copyright (c) 2015年 Katsuma Tanaka. All rights reserved.
 //
 
+import Foundation
+
 public protocol Cache {
     
     typealias CacheObject
