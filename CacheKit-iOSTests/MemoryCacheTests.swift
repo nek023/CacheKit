@@ -12,14 +12,14 @@ import CacheKit
 
 class MemoryCacheTests: XCTestCase {
     
-    private var cache: MemoryCache<NSString>!
+    private var cache: MemoryCache<String>!
     
     override func setUp() {
         super.setUp()
         
-        cache = MemoryCache<NSString>()
+        cache = MemoryCache<String>()
     }
-
+    
     func testInitialization() {
         XCTAssertEqual(cache.count, UInt(0))
         XCTAssertEqual(cache.countLimit, UInt(0))
@@ -29,16 +29,14 @@ class MemoryCacheTests: XCTestCase {
         cache.setObject("piyo", forKey: "hoge")
         let object = cache.objectForKey("hoge")
         
-        XCTAssertNotNil(object)
-        XCTAssertEqual(object!, "piyo")
+        XCTAssertEqual(object ?? "", "piyo")
     }
     
     func testSubscription() {
         cache["hoge"] = "piyo"
         let object = cache["hoge"]
         
-        XCTAssertNotNil(object)
-        XCTAssertEqual(object!, "piyo")
+        XCTAssertEqual(object ?? "", "piyo")
     }
     
     func testCount() {
@@ -83,8 +81,7 @@ class MemoryCacheTests: XCTestCase {
         for number in 0..<100 {
             let object = cache.objectForKey("key\(number)")
             
-            XCTAssertNotNil(object)
-            XCTAssertTrue(object!.isEqualToString("value\(number)"))
+            XCTAssertEqual(object ?? "", "value\(number)")
         }
     }
     
@@ -100,8 +97,7 @@ class MemoryCacheTests: XCTestCase {
         for number in 80..<100 {
             let object = cache.objectForKey("key\(number)")
             
-            XCTAssertNotNil(object)
-            XCTAssertTrue(object!.isEqualToString("value\(number)"))
+            XCTAssertEqual(object ?? "", "value\(number)")
         }
     }
 

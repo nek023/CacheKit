@@ -44,16 +44,14 @@ class DiskCacheTests: XCTestCase {
         cache.setObject("piyo", forKey: "hoge")
         let object = cache.objectForKey("hoge")
         
-        XCTAssertNotNil(object)
-        XCTAssertEqual(object!, "piyo")
+        XCTAssertEqual(object ?? "", "piyo")
     }
     
     func testSubscription() {
         cache["hoge"] = "piyo"
         let object = cache["hoge"]
         
-        XCTAssertNotNil(object)
-        XCTAssertEqual(object!, "piyo")
+        XCTAssertEqual(object ?? "", "piyo")
     }
     
     func testCount() {
@@ -96,10 +94,11 @@ class DiskCacheTests: XCTestCase {
         XCTAssertEqual(cache.count, UInt(100))
         
         for number in 0..<100 {
-            let object = cache.objectForKey("key\(number)")
-            
-            XCTAssertNotNil(object)
-            XCTAssertTrue(object!.isEqualToString("value\(number)"))
+            if let object = cache.objectForKey("key\(number)") {
+                XCTAssertTrue(object.isEqualToString("value\(number)"))
+            } else {
+                XCTFail()
+            }
         }
     }
     
@@ -113,10 +112,11 @@ class DiskCacheTests: XCTestCase {
         XCTAssertEqual(cache.count, UInt(20))
         
         for number in 80..<100 {
-            let object = cache.objectForKey("key\(number)")
-            
-            XCTAssertNotNil(object)
-            XCTAssertTrue(object!.isEqualToString("value\(number)"))
+            if let object = cache.objectForKey("key\(number)") {
+                XCTAssertTrue(object.isEqualToString("value\(number)"))
+            } else {
+                XCTFail()
+            }
         }
     }
 
