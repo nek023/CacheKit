@@ -100,5 +100,61 @@ class MemoryCacheTests: XCTestCase {
             XCTAssertEqual(object ?? "", "value\(number)")
         }
     }
+    
+    
+    // MARK: - Performance Tests
+    
+    private var numberOfElements = 100
+    
+    func testNSCacheWritingPerformance() {
+        let cache = NSCache()
+        
+        measureBlock {
+            for number in 0..<self.numberOfElements {
+                cache.setObject("\(number)", forKey: "\(number)")
+            }
+        }
+    }
+    
+    func testWritingPerformance() {
+        measureBlock {
+            for number in 0..<self.numberOfElements {
+                self.cache.setObject("\(number)", forKey: "\(number)")
+            }
+        }
+    }
+    
+    func testNSCacheReadingPerformance() {
+        let cache = NSCache()
+        for number in 0..<numberOfElements {
+            cache.setObject("\(number)", forKey: "\(number)")
+        }
+        
+        measureBlock {
+            for number in 0..<self.numberOfElements {
+                if let object = cache.objectForKey("\(number)") as? NSString {
+                    XCTAssertEqual(object, "\(number)")
+                } else {
+                    XCTFail()
+                }
+            }
+        }
+    }
+    
+    func testReadingPerformance() {
+        for number in 0..<numberOfElements {
+            cache.setObject("\(number)", forKey: "\(number)")
+        }
+        
+        measureBlock {
+            for number in 0..<self.numberOfElements {
+                if let object = self.cache.objectForKey("\(number)") {
+                    XCTAssertEqual(object, "\(number)")
+                } else {
+                    XCTFail()
+                }
+            }
+        }
+    }
 
 }

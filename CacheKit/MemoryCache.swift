@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 Katsuma Tanaka. All rights reserved.
 //
 
-    import Foundation
+import Foundation
 
 #if os(iOS)
     import UIKit
