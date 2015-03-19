@@ -12,7 +12,7 @@
     import UIKit
 #endif
 
-public class MemoryCache<T: Any>: Cache {
+public class MemoryCache<T>: Cache {
     
     typealias CacheObject = T
     
@@ -27,7 +27,11 @@ public class MemoryCache<T: Any>: Cache {
         return UInt(entries.count)
     }
     
-    public var countLimit: UInt = 0
+    public var countLimit: UInt = 0 {
+        didSet {
+            removeLeastRecentlyUsedObjects()
+        }
+    }
     
     
     // MARK: - Initializers
@@ -61,18 +65,9 @@ public class MemoryCache<T: Any>: Cache {
             resequence()
         }
         
-        // Remove least recently used objects
-        if 0 < countLimit && countLimit < count {
-            var keys = entries.keys.array.sorted { (key1: String, key2: String) in
-                return self.entries[key1]!.1 < self.entries[key2]!.1
-            }
-            
-            for index in 0..<(keys.count - Int(countLimit)) {
-                entries.removeValueForKey(keys[index])
-            }
-        }
-        
         dispatch_semaphore_signal(semaphore)
+        
+        removeLeastRecentlyUsedObjects()
     }
     
     private func resequence() {
@@ -124,6 +119,18 @@ public class MemoryCache<T: Any>: Cache {
                 setObject(object, forKey: key)
             } else {
                 removeObjectForKey(key)
+            }
+        }
+    }
+    
+    private func removeLeastRecentlyUsedObjects() {
+        if 0 < countLimit && countLimit < count {
+            var keys = entries.keys.array.sorted { (key1: String, key2: String) in
+                return self.entries[key1]!.1 < self.entries[key2]!.1
+            }
+            
+            for index in 0..<(keys.count - Int(countLimit)) {
+                entries.removeValueForKey(keys[index])
             }
         }
     }
