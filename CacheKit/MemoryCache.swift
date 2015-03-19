@@ -6,10 +6,10 @@
 //  Copyright (c) 2015年 Katsuma Tanaka. All rights reserved.
 //
 
-import Foundation
-
 #if os(iOS)
     import UIKit
+#else
+    import Foundation
 #endif
 
 public class MemoryCache<T>: Cache {
