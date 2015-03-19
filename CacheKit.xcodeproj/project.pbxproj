@@ -7,203 +7,172 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA027DBA1AB67B6A003C794A /* CacheKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA027DAF1AB67B6A003C794A /* CacheKit.framework */; };
-		AA027DD81AB67B73003C794A /* CacheKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA027DCD1AB67B73003C794A /* CacheKit.framework */; };
-		AA6CF1041AB67BD8005A94DC /* DiskCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6CF1021AB67BD8005A94DC /* DiskCacheTests.swift */; };
-		AA6CF1051AB67BD8005A94DC /* DiskCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6CF1021AB67BD8005A94DC /* DiskCacheTests.swift */; };
-		AA6CF1061AB67BD8005A94DC /* MemoryCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6CF1031AB67BD8005A94DC /* MemoryCacheTests.swift */; };
-		AA6CF1071AB67BD8005A94DC /* MemoryCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6CF1031AB67BD8005A94DC /* MemoryCacheTests.swift */; };
-		AA91701E1AB67DE600BD1779 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91701A1AB67DE600BD1779 /* Cache.swift */; };
-		AA91701F1AB67DE600BD1779 /* CacheKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AA91701B1AB67DE600BD1779 /* CacheKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA9170201AB67DE600BD1779 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91701C1AB67DE600BD1779 /* DiskCache.swift */; };
-		AA9170211AB67DE600BD1779 /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91701D1AB67DE600BD1779 /* MemoryCache.swift */; };
-		AA9170221AB67F1E00BD1779 /* CacheKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AA91701B1AB67DE600BD1779 /* CacheKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA9170241AB680CD00BD1779 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91701C1AB67DE600BD1779 /* DiskCache.swift */; };
-		AA9170251AB680CD00BD1779 /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91701D1AB67DE600BD1779 /* MemoryCache.swift */; };
-		AA9170261AB681F800BD1779 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91701A1AB67DE600BD1779 /* Cache.swift */; };
+		AA1EB4B61ABB142E00556CFD /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF44A8F1ABB11D80040A949 /* Cache.swift */; };
+		AA1EB4B71ABB142E00556CFD /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF44A901ABB11D80040A949 /* DiskCache.swift */; };
+		AA1EB4B81ABB142E00556CFD /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF44A911ABB11D80040A949 /* MemoryCache.swift */; };
+		AA1EB4B91ABB143300556CFD /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF44A8F1ABB11D80040A949 /* Cache.swift */; };
+		AA1EB4BA1ABB143300556CFD /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF44A901ABB11D80040A949 /* DiskCache.swift */; };
+		AA1EB4BB1ABB143300556CFD /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF44A911ABB11D80040A949 /* MemoryCache.swift */; };
+		AA1EB4BC1ABB143800556CFD /* MemoryCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF44A961ABB11E40040A949 /* MemoryCacheTests.swift */; };
+		AA1EB4BD1ABB143800556CFD /* DiskCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF44A951ABB11E40040A949 /* DiskCacheTests.swift */; };
+		AA1EB4BE1ABB143B00556CFD /* MemoryCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF44A961ABB11E40040A949 /* MemoryCacheTests.swift */; };
+		AA1EB4BF1ABB143B00556CFD /* DiskCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF44A951ABB11E40040A949 /* DiskCacheTests.swift */; };
+		AAAEB9C51ABB137C00D1C354 /* CacheKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAAEB9BA1ABB137C00D1C354 /* CacheKit.framework */; };
+		AAAEB9E31ABB138300D1C354 /* CacheKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAAEB9D81ABB138300D1C354 /* CacheKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AA027DBB1AB67B6A003C794A /* PBXContainerItemProxy */ = {
+		AAAEB9C61ABB137C00D1C354 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AA9228B21AB5B830003C5B80 /* Project object */;
+			containerPortal = AAF44A6A1ABB11CB0040A949 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AA027DAE1AB67B6A003C794A;
+			remoteGlobalIDString = AAAEB9B91ABB137C00D1C354;
 			remoteInfo = "CacheKit-iOS";
 		};
-		AA027DD91AB67B73003C794A /* PBXContainerItemProxy */ = {
+		AAAEB9E41ABB138300D1C354 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AA9228B21AB5B830003C5B80 /* Project object */;
+			containerPortal = AAF44A6A1ABB11CB0040A949 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AA027DCC1AB67B73003C794A;
+			remoteGlobalIDString = AAAEB9D71ABB138300D1C354;
 			remoteInfo = "CacheKit-OSX";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AA027DAF1AB67B6A003C794A /* CacheKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA027DB91AB67B6A003C794A /* CacheKit-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CacheKit-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA027DBF1AB67B6A003C794A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA027DCD1AB67B73003C794A /* CacheKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA027DD71AB67B73003C794A /* CacheKit-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CacheKit-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA027DDD1AB67B73003C794A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA6CF1021AB67BD8005A94DC /* DiskCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskCacheTests.swift; sourceTree = "<group>"; };
-		AA6CF1031AB67BD8005A94DC /* MemoryCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCacheTests.swift; sourceTree = "<group>"; };
-		AA91701A1AB67DE600BD1779 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
-		AA91701B1AB67DE600BD1779 /* CacheKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheKit.h; sourceTree = "<group>"; };
-		AA91701C1AB67DE600BD1779 /* DiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
-		AA91701D1AB67DE600BD1779 /* MemoryCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCache.swift; sourceTree = "<group>"; };
-		AA9170271AB683A100BD1779 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAAEB9BA1ABB137C00D1C354 /* CacheKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAAEB9C41ABB137C00D1C354 /* CacheKit-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CacheKit-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAAEB9D81ABB138300D1C354 /* CacheKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAAEB9E21ABB138300D1C354 /* CacheKit-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CacheKit-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF44A771ABB11CB0040A949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAF44A781ABB11CB0040A949 /* CacheKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheKit.h; sourceTree = "<group>"; };
+		AAF44A841ABB11CB0040A949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAF44A8F1ABB11D80040A949 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		AAF44A901ABB11D80040A949 /* DiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
+		AAF44A911ABB11D80040A949 /* MemoryCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCache.swift; sourceTree = "<group>"; };
+		AAF44A951ABB11E40040A949 /* DiskCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskCacheTests.swift; sourceTree = "<group>"; };
+		AAF44A961ABB11E40040A949 /* MemoryCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCacheTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AA027DAB1AB67B6A003C794A /* Frameworks */ = {
+		AAAEB9B61ABB137C00D1C354 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA027DB61AB67B6A003C794A /* Frameworks */ = {
+		AAAEB9C11ABB137C00D1C354 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA027DBA1AB67B6A003C794A /* CacheKit.framework in Frameworks */,
+				AAAEB9C51ABB137C00D1C354 /* CacheKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA027DC91AB67B73003C794A /* Frameworks */ = {
+		AAAEB9D41ABB138300D1C354 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA027DD41AB67B73003C794A /* Frameworks */ = {
+		AAAEB9DF1ABB138300D1C354 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA027DD81AB67B73003C794A /* CacheKit.framework in Frameworks */,
+				AAAEB9E31ABB138300D1C354 /* CacheKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AA027DBD1AB67B6A003C794A /* CacheKit-iOSTests */ = {
+		AAF44A691ABB11CB0040A949 = {
 			isa = PBXGroup;
 			children = (
-				AA027DBE1AB67B6A003C794A /* Supporting Files */,
+				AAF44A751ABB11CB0040A949 /* CacheKit */,
+				AAF44A821ABB11CB0040A949 /* CacheKitTests */,
+				AAF44A741ABB11CB0040A949 /* Products */,
 			);
-			path = "CacheKit-iOSTests";
 			sourceTree = "<group>";
 		};
-		AA027DBE1AB67B6A003C794A /* Supporting Files */ = {
+		AAF44A741ABB11CB0040A949 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA027DBF1AB67B6A003C794A /* Info.plist */,
+				AAAEB9BA1ABB137C00D1C354 /* CacheKit.framework */,
+				AAAEB9C41ABB137C00D1C354 /* CacheKit-iOSTests.xctest */,
+				AAAEB9D81ABB138300D1C354 /* CacheKit.framework */,
+				AAAEB9E21ABB138300D1C354 /* CacheKit-OSXTests.xctest */,
 			);
-			name = "Supporting Files";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		AA027DDB1AB67B73003C794A /* CacheKit-OSXTests */ = {
+		AAF44A751ABB11CB0040A949 /* CacheKit */ = {
 			isa = PBXGroup;
 			children = (
-				AA027DDC1AB67B73003C794A /* Supporting Files */,
-			);
-			path = "CacheKit-OSXTests";
-			sourceTree = "<group>";
-		};
-		AA027DDC1AB67B73003C794A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AA027DDD1AB67B73003C794A /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AA6CF1081AB67BDD005A94DC /* CacheKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				AA6CF1031AB67BD8005A94DC /* MemoryCacheTests.swift */,
-				AA6CF1021AB67BD8005A94DC /* DiskCacheTests.swift */,
-			);
-			name = CacheKitTests;
-			path = "CacheKit-iOSTests";
-			sourceTree = "<group>";
-		};
-		AA9170191AB67DE600BD1779 /* CacheKit */ = {
-			isa = PBXGroup;
-			children = (
-				AA91701B1AB67DE600BD1779 /* CacheKit.h */,
-				AA91701A1AB67DE600BD1779 /* Cache.swift */,
-				AA91701D1AB67DE600BD1779 /* MemoryCache.swift */,
-				AA91701C1AB67DE600BD1779 /* DiskCache.swift */,
-				AA91702A1AB683A400BD1779 /* Supporting Files */,
+				AAF44A781ABB11CB0040A949 /* CacheKit.h */,
+				AAF44A8F1ABB11D80040A949 /* Cache.swift */,
+				AAF44A911ABB11D80040A949 /* MemoryCache.swift */,
+				AAF44A901ABB11D80040A949 /* DiskCache.swift */,
+				AAF44A761ABB11CB0040A949 /* Supporting Files */,
 			);
 			path = CacheKit;
 			sourceTree = "<group>";
 		};
-		AA91702A1AB683A400BD1779 /* Supporting Files */ = {
+		AAF44A761ABB11CB0040A949 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AA9170271AB683A100BD1779 /* Info.plist */,
+				AAF44A771ABB11CB0040A949 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AA9228B11AB5B830003C5B80 = {
+		AAF44A821ABB11CB0040A949 /* CacheKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				AA9170191AB67DE600BD1779 /* CacheKit */,
-				AA6CF1081AB67BDD005A94DC /* CacheKitTests */,
-				AA027DBD1AB67B6A003C794A /* CacheKit-iOSTests */,
-				AA027DDB1AB67B73003C794A /* CacheKit-OSXTests */,
-				AA9228BC1AB5B830003C5B80 /* Products */,
+				AAF44A961ABB11E40040A949 /* MemoryCacheTests.swift */,
+				AAF44A951ABB11E40040A949 /* DiskCacheTests.swift */,
+				AAF44A831ABB11CB0040A949 /* Supporting Files */,
 			);
+			path = CacheKitTests;
 			sourceTree = "<group>";
 		};
-		AA9228BC1AB5B830003C5B80 /* Products */ = {
+		AAF44A831ABB11CB0040A949 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AA027DAF1AB67B6A003C794A /* CacheKit.framework */,
-				AA027DB91AB67B6A003C794A /* CacheKit-iOSTests.xctest */,
-				AA027DCD1AB67B73003C794A /* CacheKit.framework */,
-				AA027DD71AB67B73003C794A /* CacheKit-OSXTests.xctest */,
+				AAF44A841ABB11CB0040A949 /* Info.plist */,
 			);
-			name = Products;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		AA027DAC1AB67B6A003C794A /* Headers */ = {
+		AAAEB9B71ABB137C00D1C354 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA91701F1AB67DE600BD1779 /* CacheKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA027DCA1AB67B73003C794A /* Headers */ = {
+		AAAEB9D51ABB138300D1C354 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA9170221AB67F1E00BD1779 /* CacheKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		AA027DAE1AB67B6A003C794A /* CacheKit-iOS */ = {
+		AAAEB9B91ABB137C00D1C354 /* CacheKit-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA027DC61AB67B6A003C794A /* Build configuration list for PBXNativeTarget "CacheKit-iOS" */;
+			buildConfigurationList = AAAEB9D11ABB137C00D1C354 /* Build configuration list for PBXNativeTarget "CacheKit-iOS" */;
 			buildPhases = (
-				AA027DAA1AB67B6A003C794A /* Sources */,
-				AA027DAB1AB67B6A003C794A /* Frameworks */,
-				AA027DAC1AB67B6A003C794A /* Headers */,
-				AA027DAD1AB67B6A003C794A /* Resources */,
+				AAAEB9B51ABB137C00D1C354 /* Sources */,
+				AAAEB9B61ABB137C00D1C354 /* Frameworks */,
+				AAAEB9B71ABB137C00D1C354 /* Headers */,
+				AAAEB9B81ABB137C00D1C354 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -211,35 +180,35 @@
 			);
 			name = "CacheKit-iOS";
 			productName = "CacheKit-iOS";
-			productReference = AA027DAF1AB67B6A003C794A /* CacheKit.framework */;
+			productReference = AAAEB9BA1ABB137C00D1C354 /* CacheKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		AA027DB81AB67B6A003C794A /* CacheKit-iOSTests */ = {
+		AAAEB9C31ABB137C00D1C354 /* CacheKit-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA027DC71AB67B6A003C794A /* Build configuration list for PBXNativeTarget "CacheKit-iOSTests" */;
+			buildConfigurationList = AAAEB9D21ABB137C00D1C354 /* Build configuration list for PBXNativeTarget "CacheKit-iOSTests" */;
 			buildPhases = (
-				AA027DB51AB67B6A003C794A /* Sources */,
-				AA027DB61AB67B6A003C794A /* Frameworks */,
-				AA027DB71AB67B6A003C794A /* Resources */,
+				AAAEB9C01ABB137C00D1C354 /* Sources */,
+				AAAEB9C11ABB137C00D1C354 /* Frameworks */,
+				AAAEB9C21ABB137C00D1C354 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AA027DBC1AB67B6A003C794A /* PBXTargetDependency */,
+				AAAEB9C71ABB137C00D1C354 /* PBXTargetDependency */,
 			);
 			name = "CacheKit-iOSTests";
 			productName = "CacheKit-iOSTests";
-			productReference = AA027DB91AB67B6A003C794A /* CacheKit-iOSTests.xctest */;
+			productReference = AAAEB9C41ABB137C00D1C354 /* CacheKit-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AA027DCC1AB67B73003C794A /* CacheKit-OSX */ = {
+		AAAEB9D71ABB138300D1C354 /* CacheKit-OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA027DE01AB67B73003C794A /* Build configuration list for PBXNativeTarget "CacheKit-OSX" */;
+			buildConfigurationList = AAAEB9EB1ABB138300D1C354 /* Build configuration list for PBXNativeTarget "CacheKit-OSX" */;
 			buildPhases = (
-				AA027DC81AB67B73003C794A /* Sources */,
-				AA027DC91AB67B73003C794A /* Frameworks */,
-				AA027DCA1AB67B73003C794A /* Headers */,
-				AA027DCB1AB67B73003C794A /* Resources */,
+				AAAEB9D31ABB138300D1C354 /* Sources */,
+				AAAEB9D41ABB138300D1C354 /* Frameworks */,
+				AAAEB9D51ABB138300D1C354 /* Headers */,
+				AAAEB9D61ABB138300D1C354 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -247,93 +216,93 @@
 			);
 			name = "CacheKit-OSX";
 			productName = "CacheKit-OSX";
-			productReference = AA027DCD1AB67B73003C794A /* CacheKit.framework */;
+			productReference = AAAEB9D81ABB138300D1C354 /* CacheKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		AA027DD61AB67B73003C794A /* CacheKit-OSXTests */ = {
+		AAAEB9E11ABB138300D1C354 /* CacheKit-OSXTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA027DE31AB67B73003C794A /* Build configuration list for PBXNativeTarget "CacheKit-OSXTests" */;
+			buildConfigurationList = AAAEB9EE1ABB138300D1C354 /* Build configuration list for PBXNativeTarget "CacheKit-OSXTests" */;
 			buildPhases = (
-				AA027DD31AB67B73003C794A /* Sources */,
-				AA027DD41AB67B73003C794A /* Frameworks */,
-				AA027DD51AB67B73003C794A /* Resources */,
+				AAAEB9DE1ABB138300D1C354 /* Sources */,
+				AAAEB9DF1ABB138300D1C354 /* Frameworks */,
+				AAAEB9E01ABB138300D1C354 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AA027DDA1AB67B73003C794A /* PBXTargetDependency */,
+				AAAEB9E51ABB138300D1C354 /* PBXTargetDependency */,
 			);
 			name = "CacheKit-OSXTests";
 			productName = "CacheKit-OSXTests";
-			productReference = AA027DD71AB67B73003C794A /* CacheKit-OSXTests.xctest */;
+			productReference = AAAEB9E21ABB138300D1C354 /* CacheKit-OSXTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AA9228B21AB5B830003C5B80 /* Project object */ = {
+		AAF44A6A1ABB11CB0040A949 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Katsuma Tanaka";
 				TargetAttributes = {
-					AA027DAE1AB67B6A003C794A = {
+					AAAEB9B91ABB137C00D1C354 = {
 						CreatedOnToolsVersion = 6.2;
 					};
-					AA027DB81AB67B6A003C794A = {
+					AAAEB9C31ABB137C00D1C354 = {
 						CreatedOnToolsVersion = 6.2;
 					};
-					AA027DCC1AB67B73003C794A = {
+					AAAEB9D71ABB138300D1C354 = {
 						CreatedOnToolsVersion = 6.2;
 					};
-					AA027DD61AB67B73003C794A = {
+					AAAEB9E11ABB138300D1C354 = {
 						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
-			buildConfigurationList = AA9228B51AB5B830003C5B80 /* Build configuration list for PBXProject "CacheKit" */;
+			buildConfigurationList = AAF44A6D1ABB11CB0040A949 /* Build configuration list for PBXProject "CacheKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = AA9228B11AB5B830003C5B80;
-			productRefGroup = AA9228BC1AB5B830003C5B80 /* Products */;
+			mainGroup = AAF44A691ABB11CB0040A949;
+			productRefGroup = AAF44A741ABB11CB0040A949 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AA027DAE1AB67B6A003C794A /* CacheKit-iOS */,
-				AA027DB81AB67B6A003C794A /* CacheKit-iOSTests */,
-				AA027DCC1AB67B73003C794A /* CacheKit-OSX */,
-				AA027DD61AB67B73003C794A /* CacheKit-OSXTests */,
+				AAAEB9B91ABB137C00D1C354 /* CacheKit-iOS */,
+				AAAEB9C31ABB137C00D1C354 /* CacheKit-iOSTests */,
+				AAAEB9D71ABB138300D1C354 /* CacheKit-OSX */,
+				AAAEB9E11ABB138300D1C354 /* CacheKit-OSXTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AA027DAD1AB67B6A003C794A /* Resources */ = {
+		AAAEB9B81ABB137C00D1C354 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA027DB71AB67B6A003C794A /* Resources */ = {
+		AAAEB9C21ABB137C00D1C354 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA027DCB1AB67B73003C794A /* Resources */ = {
+		AAAEB9D61ABB138300D1C354 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA027DD51AB67B73003C794A /* Resources */ = {
+		AAAEB9E01ABB138300D1C354 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -343,64 +312,64 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AA027DAA1AB67B6A003C794A /* Sources */ = {
+		AAAEB9B51ABB137C00D1C354 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA9170211AB67DE600BD1779 /* MemoryCache.swift in Sources */,
-				AA91701E1AB67DE600BD1779 /* Cache.swift in Sources */,
-				AA9170201AB67DE600BD1779 /* DiskCache.swift in Sources */,
+				AA1EB4B61ABB142E00556CFD /* Cache.swift in Sources */,
+				AA1EB4B71ABB142E00556CFD /* DiskCache.swift in Sources */,
+				AA1EB4B81ABB142E00556CFD /* MemoryCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA027DB51AB67B6A003C794A /* Sources */ = {
+		AAAEB9C01ABB137C00D1C354 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA6CF1061AB67BD8005A94DC /* MemoryCacheTests.swift in Sources */,
-				AA6CF1041AB67BD8005A94DC /* DiskCacheTests.swift in Sources */,
+				AA1EB4BC1ABB143800556CFD /* MemoryCacheTests.swift in Sources */,
+				AA1EB4BD1ABB143800556CFD /* DiskCacheTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA027DC81AB67B73003C794A /* Sources */ = {
+		AAAEB9D31ABB138300D1C354 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA9170261AB681F800BD1779 /* Cache.swift in Sources */,
-				AA9170241AB680CD00BD1779 /* DiskCache.swift in Sources */,
-				AA9170251AB680CD00BD1779 /* MemoryCache.swift in Sources */,
+				AA1EB4B91ABB143300556CFD /* Cache.swift in Sources */,
+				AA1EB4BA1ABB143300556CFD /* DiskCache.swift in Sources */,
+				AA1EB4BB1ABB143300556CFD /* MemoryCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA027DD31AB67B73003C794A /* Sources */ = {
+		AAAEB9DE1ABB138300D1C354 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA6CF1071AB67BD8005A94DC /* MemoryCacheTests.swift in Sources */,
-				AA6CF1051AB67BD8005A94DC /* DiskCacheTests.swift in Sources */,
+				AA1EB4BE1ABB143B00556CFD /* MemoryCacheTests.swift in Sources */,
+				AA1EB4BF1ABB143B00556CFD /* DiskCacheTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AA027DBC1AB67B6A003C794A /* PBXTargetDependency */ = {
+		AAAEB9C71ABB137C00D1C354 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AA027DAE1AB67B6A003C794A /* CacheKit-iOS */;
-			targetProxy = AA027DBB1AB67B6A003C794A /* PBXContainerItemProxy */;
+			target = AAAEB9B91ABB137C00D1C354 /* CacheKit-iOS */;
+			targetProxy = AAAEB9C61ABB137C00D1C354 /* PBXContainerItemProxy */;
 		};
-		AA027DDA1AB67B73003C794A /* PBXTargetDependency */ = {
+		AAAEB9E51ABB138300D1C354 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AA027DCC1AB67B73003C794A /* CacheKit-OSX */;
-			targetProxy = AA027DD91AB67B73003C794A /* PBXContainerItemProxy */;
+			target = AAAEB9D71ABB138300D1C354 /* CacheKit-OSX */;
+			targetProxy = AAAEB9E41ABB138300D1C354 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		AA027DC21AB67B6A003C794A /* Debug */ = {
+		AAAEB9CD1ABB137C00D1C354 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -411,34 +380,37 @@
 				);
 				INFOPLIST_FILE = CacheKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = CacheKit;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		AA027DC31AB67B6A003C794A /* Release */ = {
+		AAAEB9CE1ABB137C00D1C354 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CacheKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = CacheKit;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		AA027DC41AB67B6A003C794A /* Debug */ = {
+		AAAEB9CF1ABB137C00D1C354 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -447,29 +419,34 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "CacheKit-iOSTests/Info.plist";
+				INFOPLIST_FILE = CacheKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		AA027DC51AB67B6A003C794A /* Release */ = {
+		AAAEB9D01ABB137C00D1C354 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "CacheKit-iOSTests/Info.plist";
+				INFOPLIST_FILE = CacheKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		AA027DE11AB67B73003C794A /* Debug */ = {
+		AAAEB9EC1ABB138300D1C354 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -483,20 +460,15 @@
 				INFOPLIST_FILE = CacheKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = CacheKit;
-				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		AA027DE21AB67B73003C794A /* Release */ = {
+		AAAEB9ED1ABB138300D1C354 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -505,14 +477,12 @@
 				INFOPLIST_FILE = CacheKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = CacheKit;
-				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		AA027DE41AB67B73003C794A /* Debug */ = {
+		AAAEB9EF1ABB138300D1C354 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -524,32 +494,27 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "CacheKit-OSXTests/Info.plist";
+				INFOPLIST_FILE = CacheKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
-		AA027DE51AB67B73003C794A /* Release */ = {
+		AAAEB9F01ABB138300D1C354 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "CacheKit-OSXTests/Info.plist";
+				INFOPLIST_FILE = CacheKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		AA9228CF1AB5B830003C5B80 /* Debug */ = {
+		AAF44A871ABB11CB0040A949 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -566,7 +531,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -584,18 +548,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		AA9228D01AB5B830003C5B80 /* Release */ = {
+		AAF44A881ABB11CB0040A949 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -612,9 +576,9 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -624,11 +588,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
+				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -637,52 +600,52 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AA027DC61AB67B6A003C794A /* Build configuration list for PBXNativeTarget "CacheKit-iOS" */ = {
+		AAAEB9D11ABB137C00D1C354 /* Build configuration list for PBXNativeTarget "CacheKit-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA027DC21AB67B6A003C794A /* Debug */,
-				AA027DC31AB67B6A003C794A /* Release */,
+				AAAEB9CD1ABB137C00D1C354 /* Debug */,
+				AAAEB9CE1ABB137C00D1C354 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA027DC71AB67B6A003C794A /* Build configuration list for PBXNativeTarget "CacheKit-iOSTests" */ = {
+		AAAEB9D21ABB137C00D1C354 /* Build configuration list for PBXNativeTarget "CacheKit-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA027DC41AB67B6A003C794A /* Debug */,
-				AA027DC51AB67B6A003C794A /* Release */,
+				AAAEB9CF1ABB137C00D1C354 /* Debug */,
+				AAAEB9D01ABB137C00D1C354 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA027DE01AB67B73003C794A /* Build configuration list for PBXNativeTarget "CacheKit-OSX" */ = {
+		AAAEB9EB1ABB138300D1C354 /* Build configuration list for PBXNativeTarget "CacheKit-OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA027DE11AB67B73003C794A /* Debug */,
-				AA027DE21AB67B73003C794A /* Release */,
+				AAAEB9EC1ABB138300D1C354 /* Debug */,
+				AAAEB9ED1ABB138300D1C354 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA027DE31AB67B73003C794A /* Build configuration list for PBXNativeTarget "CacheKit-OSXTests" */ = {
+		AAAEB9EE1ABB138300D1C354 /* Build configuration list for PBXNativeTarget "CacheKit-OSXTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA027DE41AB67B73003C794A /* Debug */,
-				AA027DE51AB67B73003C794A /* Release */,
+				AAAEB9EF1ABB138300D1C354 /* Debug */,
+				AAAEB9F01ABB138300D1C354 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA9228B51AB5B830003C5B80 /* Build configuration list for PBXProject "CacheKit" */ = {
+		AAF44A6D1ABB11CB0040A949 /* Build configuration list for PBXProject "CacheKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA9228CF1AB5B830003C5B80 /* Debug */,
-				AA9228D01AB5B830003C5B80 /* Release */,
+				AAF44A871ABB11CB0040A949 /* Debug */,
+				AAF44A881ABB11CB0040A949 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AA9228B21AB5B830003C5B80 /* Project object */;
+	rootObject = AAF44A6A1ABB11CB0040A949 /* Project object */;
 }

@@ -1,8 +1,8 @@
 //
-//  MemoryCacheTests.swift
+//  DiskCacheTests.swift
 //  CacheKit
 //
-//  Created by Katsuma Tanaka on 2015/03/12.
+//  Created by Katsuma Tanaka on 2015/03/13.
 //  Copyright (c) 2015年 Katsuma Tanaka. All rights reserved.
 //
 
@@ -10,14 +10,29 @@ import Foundation
 import XCTest
 import CacheKit
 
-class MemoryCacheTests: XCTestCase {
+class DiskCacheTests: XCTestCase {
     
-    private var cache: MemoryCache<NSString>!
+    private var cache: DiskCache<NSString>!
     
     override func setUp() {
         super.setUp()
         
-        cache = MemoryCache<NSString>()
+        cache = DiskCache<NSString>(directoryPath: directoryPath)
+    }
+    
+    override func tearDown() {
+        cache.removeAllObjects()
+        
+        super.tearDown()
+    }
+    
+    var directoryPath: String {
+        var directoryPath = NSTemporaryDirectory()
+        if let bundleIdentifier = NSBundle(forClass: self.dynamicType).bundleIdentifier {
+            directoryPath = directoryPath.stringByAppendingPathComponent(bundleIdentifier)
+        }
+        
+        return directoryPath
     }
 
     func testInitialization() {
@@ -29,16 +44,14 @@ class MemoryCacheTests: XCTestCase {
         cache.setObject("piyo", forKey: "hoge")
         let object = cache.objectForKey("hoge")
         
-        XCTAssertNotNil(object)
-        XCTAssertEqual(object!, "piyo")
+        XCTAssertEqual(object ?? "", "piyo")
     }
     
     func testSubscription() {
         cache["hoge"] = "piyo"
         let object = cache["hoge"]
         
-        XCTAssertNotNil(object)
-        XCTAssertEqual(object!, "piyo")
+        XCTAssertEqual(object ?? "", "piyo")
     }
     
     func testCount() {
@@ -81,10 +94,11 @@ class MemoryCacheTests: XCTestCase {
         XCTAssertEqual(cache.count, UInt(100))
         
         for number in 0..<100 {
-            let object = cache.objectForKey("key\(number)")
-            
-            XCTAssertNotNil(object)
-            XCTAssertTrue(object!.isEqualToString("value\(number)"))
+            if let object = cache.objectForKey("key\(number)") {
+                XCTAssertTrue(object.isEqualToString("value\(number)"))
+            } else {
+                XCTFail()
+            }
         }
     }
     
@@ -98,10 +112,11 @@ class MemoryCacheTests: XCTestCase {
         XCTAssertEqual(cache.count, UInt(20))
         
         for number in 80..<100 {
-            let object = cache.objectForKey("key\(number)")
-            
-            XCTAssertNotNil(object)
-            XCTAssertTrue(object!.isEqualToString("value\(number)"))
+            if let object = cache.objectForKey("key\(number)") {
+                XCTAssertTrue(object.isEqualToString("value\(number)"))
+            } else {
+                XCTFail()
+            }
         }
     }
 

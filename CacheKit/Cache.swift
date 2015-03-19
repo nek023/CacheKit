@@ -19,5 +19,8 @@ public protocol Cache {
     func hasObjectForKey(key: String) -> Bool
     
     subscript(key: String) -> CacheObject? { get set }
+    
+    var count: UInt { get }
+    var countLimit: UInt  { get set }
 
 }

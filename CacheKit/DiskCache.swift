@@ -15,7 +15,7 @@ public class DiskCache<T: NSCoding>: Cache {
     
     // MARK: - Properties
     
-    private let semaphore: dispatch_semaphore_t
+    private let semaphore: dispatch_semaphore_t = dispatch_semaphore_create(1)
     private var entries: [(String, NSDate)] = []
     
     public let directoryPath: String
@@ -34,7 +34,6 @@ public class DiskCache<T: NSCoding>: Cache {
     // MARK: - Initializers
     
     public init(directoryPath: String) {
-        self.semaphore = dispatch_semaphore_create(1)
         self.directoryPath = directoryPath
         
         // Create directory if necessary

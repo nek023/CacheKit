@@ -1,40 +1,30 @@
 //
-//  DiskCacheTests.swift
+//  MemoryCacheTests.swift
 //  CacheKit
 //
-//  Created by Katsuma Tanaka on 2015/03/13.
+//  Created by Katsuma Tanaka on 2015/03/12.
 //  Copyright (c) 2015年 Katsuma Tanaka. All rights reserved.
 //
 
-import Foundation
+#if os(iOS)
+    import UIKit
+#else
+    import Foundation
+#endif
+
 import XCTest
 import CacheKit
 
-class DiskCacheTests: XCTestCase {
+class MemoryCacheTests: XCTestCase {
     
-    private var cache: DiskCache<NSString>!
+    private var cache: MemoryCache<String>!
     
     override func setUp() {
         super.setUp()
         
-        cache = DiskCache<NSString>(directoryPath: directoryPath)
+        cache = MemoryCache<String>()
     }
     
-    override func tearDown() {
-        cache.removeAllObjects()
-        
-        super.tearDown()
-    }
-    
-    var directoryPath: String {
-        var directoryPath = NSTemporaryDirectory()
-        if let bundleIdentifier = NSBundle(forClass: self.dynamicType).bundleIdentifier {
-            directoryPath = directoryPath.stringByAppendingPathComponent(bundleIdentifier)
-        }
-        
-        return directoryPath
-    }
-
     func testInitialization() {
         XCTAssertEqual(cache.count, UInt(0))
         XCTAssertEqual(cache.countLimit, UInt(0))
@@ -44,16 +34,14 @@ class DiskCacheTests: XCTestCase {
         cache.setObject("piyo", forKey: "hoge")
         let object = cache.objectForKey("hoge")
         
-        XCTAssertNotNil(object)
-        XCTAssertEqual(object!, "piyo")
+        XCTAssertEqual(object ?? "", "piyo")
     }
     
     func testSubscription() {
         cache["hoge"] = "piyo"
         let object = cache["hoge"]
         
-        XCTAssertNotNil(object)
-        XCTAssertEqual(object!, "piyo")
+        XCTAssertEqual(object ?? "", "piyo")
     }
     
     func testCount() {
@@ -98,8 +86,7 @@ class DiskCacheTests: XCTestCase {
         for number in 0..<100 {
             let object = cache.objectForKey("key\(number)")
             
-            XCTAssertNotNil(object)
-            XCTAssertTrue(object!.isEqualToString("value\(number)"))
+            XCTAssertEqual(object ?? "", "value\(number)")
         }
     }
     
@@ -115,8 +102,63 @@ class DiskCacheTests: XCTestCase {
         for number in 80..<100 {
             let object = cache.objectForKey("key\(number)")
             
-            XCTAssertNotNil(object)
-            XCTAssertTrue(object!.isEqualToString("value\(number)"))
+            XCTAssertEqual(object ?? "", "value\(number)")
+        }
+    }
+    
+    
+    // MARK: - Performance Tests
+    
+    private var numberOfElements = 100
+    
+    func testNSCacheWritingPerformance() {
+        let cache = NSCache()
+        
+        measureBlock {
+            for number in 0..<self.numberOfElements {
+                cache.setObject("\(number)", forKey: "\(number)")
+            }
+        }
+    }
+    
+    func testWritingPerformance() {
+        measureBlock {
+            for number in 0..<self.numberOfElements {
+                self.cache.setObject("\(number)", forKey: "\(number)")
+            }
+        }
+    }
+    
+    func testNSCacheReadingPerformance() {
+        let cache = NSCache()
+        for number in 0..<numberOfElements {
+            cache.setObject("\(number)", forKey: "\(number)")
+        }
+        
+        measureBlock {
+            for number in 0..<self.numberOfElements {
+                if let object = cache.objectForKey("\(number)") as? NSString {
+                    XCTAssertEqual(object, "\(number)")
+                } else {
+                    XCTFail()
+                }
+            }
+        }
+    }
+    
+    func testReadingPerformance() {
+        for number in 0..<numberOfElements {
+            cache.setObject("\(number)", forKey: "\(number)")
+        }
+        
+        measureBlock {
+            for number in 0..<self.numberOfElements {
+                if let object = self.cache.objectForKey("\(number)") {
+                    XCTAssertEqual(object, "\(number)")
+                } else {
+                    XCTFail()
+                }
+            }
         }
     }
 

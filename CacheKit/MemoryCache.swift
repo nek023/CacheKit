@@ -8,28 +8,28 @@
 
 #if os(iOS)
     import UIKit
-#elseif os(OSX)
+#else
     import Foundation
 #endif
 
-public class MemoryCache<T: AnyObject>: Cache {
+public class MemoryCache<T>: Cache {
     
     typealias CacheObject = T
     
     
     // MARK: - Properties
     
-    private let cache: NSCache
+    private let semaphore: dispatch_semaphore_t = dispatch_semaphore_create(1)
+    private var entries: Dictionary<String, (T, Int)> = [:]
+    private var sequenceNumber: UInt = 0
     
-    public private(set) var count: UInt = 0
+    public var count: UInt {
+        return UInt(entries.count)
+    }
     
-    public var countLimit: UInt {
-        set {
-            cache.countLimit = Int(newValue)
-        }
-        
-        get {
-            return UInt(cache.countLimit)
+    public var countLimit: UInt = 0 {
+        didSet {
+            removeLeastRecentlyUsedObjects()
         }
     }
     
@@ -37,9 +37,6 @@ public class MemoryCache<T: AnyObject>: Cache {
     // MARK: - Initializers
     
     public init() {
-        cache = NSCache()
-        cache.evictsObjectsWithDiscardedContent = false
-        
 #if os(iOS)
         NSNotificationCenter.defaultCenter().addObserver(
             self,
@@ -60,29 +57,52 @@ public class MemoryCache<T: AnyObject>: Cache {
     // MARK: - Caching
     
     public func setObject(object: CacheObject, forKey key: String) {
-        cache.setObject(object, forKey: key)
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
         
-        if countLimit > 0 {
-            count = min(count + 1, countLimit)
-        } else {
-            count++
+        entries[key] = (object, Int(sequenceNumber))
+        sequenceNumber++
+        if sequenceNumber == UInt.max {
+            resequence()
+        }
+        
+        dispatch_semaphore_signal(semaphore)
+        
+        removeLeastRecentlyUsedObjects()
+    }
+    
+    private func resequence() {
+        sequenceNumber = 0
+        for key in entries.keys {
+            if let entry = entries[key] {
+                entries[key] = (entry.0, Int(sequenceNumber++))
+            }
         }
     }
     
     public func objectForKey(key: String) -> CacheObject? {
-        return cache.objectForKey(key) as? CacheObject
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
+        
+        let object = entries[key]?.0
+        
+        dispatch_semaphore_signal(semaphore)
+        
+        return object
     }
     
     public func removeObjectForKey(key: String) {
-        if hasObjectForKey(key) {
-            cache.removeObjectForKey(key)
-            count--
-        }
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
+        
+        entries.removeValueForKey(key)
+        
+        dispatch_semaphore_signal(semaphore)
     }
     
     public func removeAllObjects() {
-        cache.removeAllObjects()
-        count = 0
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
+        
+        entries.removeAll(keepCapacity: false)
+        
+        dispatch_semaphore_signal(semaphore)
     }
     
     public func hasObjectForKey(key: String) -> Bool {
@@ -99,6 +119,18 @@ public class MemoryCache<T: AnyObject>: Cache {
                 setObject(object, forKey: key)
             } else {
                 removeObjectForKey(key)
+            }
+        }
+    }
+    
+    private func removeLeastRecentlyUsedObjects() {
+        if 0 < countLimit && countLimit < count {
+            var keys = entries.keys.array.sorted { (key1: String, key2: String) in
+                return self.entries[key1]!.1 < self.entries[key2]!.1
+            }
+            
+            for index in 0..<(keys.count - Int(countLimit)) {
+                entries.removeValueForKey(keys[index])
             }
         }
     }
