@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA115B721ABBE26600D18773 /* CacheKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF44A781ABB11CB0040A949 /* CacheKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA115B731ABBE26600D18773 /* CacheKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF44A781ABB11CB0040A949 /* CacheKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA1EB4B61ABB142E00556CFD /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF44A8F1ABB11D80040A949 /* Cache.swift */; };
 		AA1EB4B71ABB142E00556CFD /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF44A901ABB11D80040A949 /* DiskCache.swift */; };
 		AA1EB4B81ABB142E00556CFD /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF44A911ABB11D80040A949 /* MemoryCache.swift */; };
@@ -152,6 +154,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA115B721ABBE26600D18773 /* CacheKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +162,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA115B731ABBE26600D18773 /* CacheKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
