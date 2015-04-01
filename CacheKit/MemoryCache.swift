@@ -22,6 +22,9 @@ public class MemoryCache<T>: Cache {
     private let semaphore: dispatch_semaphore_t = dispatch_semaphore_create(1)
     private var entries: Dictionary<String, (T, Int)> = [:]
     private var sequenceNumber: UInt = 0
+#if os(iOS)
+    private var memoryWarningObserver: ObserverProxy!
+#endif
     
     public var count: UInt {
         return UInt(entries.count)
@@ -38,19 +41,14 @@ public class MemoryCache<T>: Cache {
     
     public init() {
 #if os(iOS)
-        NSNotificationCenter.defaultCenter().addObserver(
-            self,
-            selector: "removeAllObjects",
-            name: UIApplicationDidReceiveMemoryWarningNotification,
-            object: nil
-        )
+        memoryWarningObserver = ObserverProxy(UIApplicationDidReceiveMemoryWarningNotification) { [weak self] _ in
+            self?.removeAllObjects()
+            return
+        }
 #endif
     }
     
     deinit {
-#if os(iOS)
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-#endif
     }
     
     

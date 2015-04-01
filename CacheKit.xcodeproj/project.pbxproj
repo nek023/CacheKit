@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		928540AE1ACC195000591640 /* ObserverProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928540AD1ACC195000591640 /* ObserverProxy.swift */; };
 		AA115B721ABBE26600D18773 /* CacheKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF44A781ABB11CB0040A949 /* CacheKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA115B731ABBE26600D18773 /* CacheKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF44A781ABB11CB0040A949 /* CacheKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA1EB4B61ABB142E00556CFD /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF44A8F1ABB11D80040A949 /* Cache.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		928540AD1ACC195000591640 /* ObserverProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserverProxy.swift; sourceTree = "<group>"; };
 		AAAEB9BA1ABB137C00D1C354 /* CacheKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAAEB9C41ABB137C00D1C354 /* CacheKit-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CacheKit-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAAEB9D81ABB138300D1C354 /* CacheKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +118,7 @@
 				AAF44A8F1ABB11D80040A949 /* Cache.swift */,
 				AAF44A911ABB11D80040A949 /* MemoryCache.swift */,
 				AAF44A901ABB11D80040A949 /* DiskCache.swift */,
+				928540AD1ACC195000591640 /* ObserverProxy.swift */,
 				AAF44A761ABB11CB0040A949 /* Supporting Files */,
 			);
 			path = CacheKit;
@@ -320,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				928540AE1ACC195000591640 /* ObserverProxy.swift in Sources */,
 				AA1EB4B61ABB142E00556CFD /* Cache.swift in Sources */,
 				AA1EB4B71ABB142E00556CFD /* DiskCache.swift in Sources */,
 				AA1EB4B81ABB142E00556CFD /* MemoryCache.swift in Sources */,
