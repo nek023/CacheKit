@@ -106,6 +106,20 @@ class MemoryCacheTests: XCTestCase {
         }
     }
     
+#if os(iOS)
+    func testBehaviorOnMemoryWarning() {
+        for number in 0..<20 {
+            cache["key\(number)"] = "value\(number)"
+        }
+        
+        XCTAssertEqual(cache.count, UInt(20))
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(UIApplicationDidReceiveMemoryWarningNotification, object: nil)
+        
+        XCTAssertEqual(cache.count, UInt(0))
+    }
+#endif
+    
     
     // MARK: - Performance Tests
     
