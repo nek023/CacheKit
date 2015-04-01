@@ -2,18 +2,24 @@
 //  ObserverProxy.swift
 //  CacheKit
 //
-//  Created by Ryosuke Sasaki on 4/1/15.
+//  Created by Ryosuke Sasaki on 2015/04/01.
 //  Copyright (c) 2015 Katsuma Tanaka. All rights reserved.
 //
 
 import Foundation
 
 @objc class ObserverProxy {
-    let callback: (NSNotification) -> Void
+    
+    // MARK: - Properties
+    
     let name: String
     let object: AnyObject?
+    let callback: (NSNotification) -> Void
    
-    init(_ name: String, callback: (NSNotification) -> Void, object: AnyObject?) {
+    
+    // MARK: - Initializers
+    
+    init(name: String, object: AnyObject?, callback: (NSNotification) -> Void) {
         self.name = name
         self.callback = callback
         self.object = object
@@ -22,18 +28,23 @@ import Foundation
             self,
             selector: "handleNotification:",
             name: name,
-            object: object)
+            object: object
+        )
     }
     
-    convenience init(_ name: String, callback: (NSNotification) -> Void) {
-        self.init(name, callback: callback, object: nil)
+    convenience init(name: String, callback: (NSNotification) -> Void) {
+        self.init(name: name, object: nil, callback: callback)
     }
     
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
+    
+    // MARK: - Handling Notifications
+    
     func handleNotification(notification: NSNotification) {
         callback(notification)
     }
+    
 }
