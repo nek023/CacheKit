@@ -2,5 +2,6 @@ language: objective-c
 before_script:
   - gem install xcpretty
 script:
-  - xcodebuild -project CacheKit.xcodeproj -scheme CacheKit-iOSTests test -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
+  - set -o pipefail
   - xcodebuild -project CacheKit.xcodeproj -scheme CacheKit-OSXTests test -sdk macosx | xcpretty -c
+  - xcodebuild -project CacheKit.xcodeproj -scheme CacheKit-iOSTests test -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
