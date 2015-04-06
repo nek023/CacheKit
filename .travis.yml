@@ -3,5 +3,5 @@ before_script:
   - gem install xcpretty
 script:
   - set -o pipefail
-  - xcodebuild -project CacheKit.xcodeproj -scheme CacheKit-OSXTests test -sdk macosx | xcpretty -c
+  # - xcodebuild -project CacheKit.xcodeproj -scheme CacheKit-OSXTests test -sdk macosx | xcpretty -c
   - xcodebuild -project CacheKit.xcodeproj -scheme CacheKit-iOSTests test -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
