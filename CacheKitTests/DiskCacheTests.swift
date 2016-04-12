@@ -17,11 +17,11 @@ class DiskCacheTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        cache = DiskCache<NSString>(directoryPath: directoryPath)
+        cache = try! DiskCache<NSString>(directoryPath: directoryPath)
     }
     
     override func tearDown() {
-        cache.removeAllObjects()
+        try! cache.removeAllObjects()
         
         super.tearDown()
     }
@@ -29,7 +29,7 @@ class DiskCacheTests: XCTestCase {
     var directoryPath: String {
         var directoryPath = NSTemporaryDirectory()
         if let bundleIdentifier = NSBundle(forClass: self.dynamicType).bundleIdentifier {
-            directoryPath = directoryPath.stringByAppendingPathComponent(bundleIdentifier)
+            directoryPath = (directoryPath as NSString).stringByAppendingPathComponent(bundleIdentifier)
         }
         
         return directoryPath
@@ -60,15 +60,15 @@ class DiskCacheTests: XCTestCase {
         
         XCTAssertEqual(cache.count, UInt(2))
         
-        cache.removeObjectForKey("hoge")
+        try! cache.removeObjectForKey("hoge")
         
         XCTAssertEqual(cache.count, UInt(1))
         
-        cache.removeObjectForKey("piyo")
+        try! cache.removeObjectForKey("piyo")
         
         XCTAssertEqual(cache.count, UInt(0))
         
-        cache.removeObjectForKey("piyo")
+        try! cache.removeObjectForKey("piyo")
         
         XCTAssertEqual(cache.count, UInt(0))
     }

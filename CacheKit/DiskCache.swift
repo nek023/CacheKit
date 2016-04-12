@@ -8,10 +8,7 @@
 
 import Foundation
 
-public class DiskCache<T: NSCoding>: Cache {
-    
-    typealias CacheObject = T
-    
+public class DiskCache<CacheObject: NSCoding>: Cache {
     
     // MARK: - Properties
     
@@ -33,33 +30,29 @@ public class DiskCache<T: NSCoding>: Cache {
     
     // MARK: - Initializers
     
-    public init(directoryPath: String) {
+    public init(directoryPath: String) throws {
         self.directoryPath = directoryPath
         
         // Create directory if necessary
         let fileManager = NSFileManager.defaultManager()
-        
+
         if !fileManager.fileExistsAtPath(directoryPath) {
-            var error: NSError?
-            if !fileManager.createDirectoryAtPath(directoryPath, withIntermediateDirectories: true, attributes: nil, error: &error) {
-                NSException.raise(error!.domain, format: "Error: %@", arguments: getVaList([error!.localizedDescription]))
-            }
+            try fileManager.createDirectoryAtPath(directoryPath, withIntermediateDirectories: true, attributes: nil)
         }
-        
+
         // Get file list
         let enumerator = fileManager.enumeratorAtURL(
-            NSURL(fileURLWithPath: directoryPath)!,
+            NSURL(fileURLWithPath: directoryPath),
             includingPropertiesForKeys: [NSURLPathKey],
             options: .SkipsHiddenFiles,
-            errorHandler: { (URL: NSURL!, error: NSError!) -> Bool in
-                NSException.raise(error!.domain, format: "Error: %@", arguments: getVaList([error!.localizedDescription]))
+            errorHandler: { (URL: NSURL, error: NSError) -> Bool in
                 return false
             }
         )!
         
         while let fileURL = enumerator.nextObject() as? NSURL {
             let filePath = fileURL.path!
-            let attributes = fileManager.attributesOfItemAtPath(filePath, error: nil)!
+            let attributes = try fileManager.attributesOfItemAtPath(filePath)
             if let modificationDate = attributes[NSFileModificationDate] as? NSDate {
                 entries.append((filePath.lastPathComponent, modificationDate))
             } else {
@@ -68,20 +61,21 @@ public class DiskCache<T: NSCoding>: Cache {
             }
         }
         
-        entries.sort { return ($0.1.compare($1.1) == .OrderedAscending) }
+        entries.sortInPlace { return ($0.1.compare($1.1) == .OrderedAscending) }
+
+    }
+
+    public convenience init(directoryURL: NSURL) throws {
+        try self.init(directoryPath: directoryURL.path!)
     }
     
-    public convenience init(directoryURL: NSURL) {
-        self.init(directoryPath: directoryURL.path!)
-    }
-    
-    public convenience init() {
+    public convenience init() throws {
         var directoryPath = NSTemporaryDirectory()
         if let bundleIdentifier = NSBundle.mainBundle().bundleIdentifier {
             directoryPath = directoryPath.stringByAppendingPathComponent(bundleIdentifier)
         }
         
-        self.init(directoryPath: directoryPath)
+        try self.init(directoryPath: directoryPath)
     }
     
     
@@ -123,7 +117,7 @@ public class DiskCache<T: NSCoding>: Cache {
         return object
     }
     
-    public func removeObjectForKey(key: String) {
+    public func removeObjectForKey(key: String) throws {
         if !hasObjectForKey(key) {
             return
         }
@@ -131,45 +125,36 @@ public class DiskCache<T: NSCoding>: Cache {
         let filePath = directoryPath.stringByAppendingPathComponent(key)
         
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
+        defer { dispatch_semaphore_signal(semaphore) }
         
         // Remove file
         let fileManager = NSFileManager.defaultManager()
         if fileManager.fileExistsAtPath(filePath) {
-            var error: NSError?
-            if !fileManager.removeItemAtPath(filePath, error: &error) {
-                NSException.raise(error!.domain, format: "Error: %@", arguments: getVaList([error!.localizedDescription]))
-            }
+            try fileManager.removeItemAtPath(filePath)
         }
         
         // Remove entry
         entries = entries.filter { $0.0 != key }
-        
-        dispatch_semaphore_signal(semaphore)
     }
     
-    public func removeAllObjects() {
+    public func removeAllObjects() throws {
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
+        defer { dispatch_semaphore_signal(semaphore) }
         
         // Remove all files
         let fileManager = NSFileManager.defaultManager()
         
         for entry in entries {
             let filePath = directoryPath.stringByAppendingPathComponent(entry.0)
-            
-            var error: NSError?
-            if !fileManager.removeItemAtPath(filePath, error: &error) {
-                NSException.raise(error!.domain, format: "Error: %@", arguments: getVaList([error!.localizedDescription]))
-            }
+            try fileManager.removeItemAtPath(filePath)
         }
         
         // Remove all entries
         entries.removeAll(keepCapacity: false)
-        
-        dispatch_semaphore_signal(semaphore)
     }
     
     public func hasObjectForKey(key: String) -> Bool {
-        for (index, entry) in enumerate(entries) {
+        for entry in entries {
             if entry.0 == key {
                 return true
             }
@@ -178,7 +163,7 @@ public class DiskCache<T: NSCoding>: Cache {
         return false
     }
     
-    public subscript(key: String) -> T? {
+    public subscript(key: String) -> CacheObject? {
         get {
             return objectForKey(key)
         }
@@ -187,7 +172,7 @@ public class DiskCache<T: NSCoding>: Cache {
             if let object = newValue {
                 setObject(object, forKey: key)
             } else {
-                removeObjectForKey(key)
+                _ = try? removeObjectForKey(key)
             }
         }
     }
@@ -195,9 +180,23 @@ public class DiskCache<T: NSCoding>: Cache {
     private func removeLeastRecentlyUsedObjects() {
         if 0 < countLimit && countLimit < count {
             for index in 0..<Int(count - countLimit) {
-                removeObjectForKey(entries[index].0)
+                _ = try? removeObjectForKey(entries[index].0)
             }
         }
+    }
+
+}
+
+// MARK: String Extension (Private)
+
+extension String {
+
+    private var lastPathComponent: String {
+        return (self as NSString).lastPathComponent
+    }
+
+    private func stringByAppendingPathComponent(str: String) -> String {
+        return (self as NSString).stringByAppendingPathComponent(str)
     }
 
 }

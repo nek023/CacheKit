@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc class ObserverProxy {
+class ObserverProxy: NSObject {
     
     // MARK: - Properties
     
@@ -23,10 +23,12 @@ import Foundation
         self.name = name
         self.callback = callback
         self.object = object
+
+        super.init()
         
         NSNotificationCenter.defaultCenter().addObserver(
             self,
-            selector: "handleNotification:",
+            selector: #selector(ObserverProxy.handleNotification(_:)),
             name: name,
             object: object
         )
