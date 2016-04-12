@@ -10,12 +10,12 @@ import Foundation
 
 public protocol Cache {
     
-    typealias CacheObject
+    associatedtype CacheObject
     
     func setObject(object: CacheObject, forKey key: String)
     func objectForKey(key: String) -> CacheObject?
-    func removeObjectForKey(key: String)
-    func removeAllObjects()
+    func removeObjectForKey(key: String) throws
+    func removeAllObjects() throws
     func hasObjectForKey(key: String) -> Bool
     
     subscript(key: String) -> CacheObject? { get set }

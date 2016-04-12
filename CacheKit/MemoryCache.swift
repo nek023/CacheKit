@@ -12,15 +12,12 @@
     import Foundation
 #endif
 
-public class MemoryCache<T>: Cache {
-    
-    typealias CacheObject = T
-    
-    
+public class MemoryCache<CacheObject>: Cache {
+
     // MARK: - Properties
     
     private let semaphore: dispatch_semaphore_t = dispatch_semaphore_create(1)
-    private var entries: Dictionary<String, (T, Int)> = [:]
+    private var entries: Dictionary<String, (CacheObject, Int)> = [:]
     private var sequenceNumber: UInt = 0
     
 #if os(iOS)
@@ -56,7 +53,7 @@ public class MemoryCache<T>: Cache {
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
         
         entries[key] = (object, Int(sequenceNumber))
-        sequenceNumber++
+        sequenceNumber += 1
         if sequenceNumber == UInt.max {
             resequence()
         }
@@ -70,7 +67,8 @@ public class MemoryCache<T>: Cache {
         sequenceNumber = 0
         for key in entries.keys {
             if let entry = entries[key] {
-                entries[key] = (entry.0, Int(sequenceNumber++))
+                entries[key] = (entry.0, Int(sequenceNumber))
+                sequenceNumber += 1
             }
         }
     }
@@ -121,7 +119,7 @@ public class MemoryCache<T>: Cache {
     
     private func removeLeastRecentlyUsedObjects() {
         if 0 < countLimit && countLimit < count {
-            var keys = entries.keys.array.sorted { (key1: String, key2: String) in
+            var keys = entries.keys.sort { (key1: String, key2: String) in
                 return self.entries[key1]!.1 < self.entries[key2]!.1
             }
             
